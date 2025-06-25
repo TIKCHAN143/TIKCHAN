@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>मेरी स्टडी वेबसाइट</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ddd;
+      padding: 10px 20px;
+    }
+    .menu-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #444;
+    }
+    .menu-options, .chapter-options, .content-box {
+      display: none;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      width: 90%;
+      margin: 10px auto;
+      padding: 10px;
+    }
+    .menu-options div, .chapter-options div {
+      margin: 8px 0;
+      cursor: pointer;
+      color: #0066cc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>TIKCHAN MASHRA</header>
+
+  <div class="top-bar">
+    <button class="menu-button" onclick="toggleMenu()">मेनू</button>
+    <img src="https://via.placeholder.com/50" alt="आपकी फोटो" class="profile-pic">
+  </div>
+
+  <!-- Subjects -->
+  <div class="menu-options" id="subjectMenu">
+    <div onclick="showChapters('history')">History</div>
+    <div onclick="showChapters('math')">Math</div>
+    <div onclick="showChapters('computer')">Computer</div>
+<div onclick="showChapters('ENGLISH')">ENGLISH</div>
+  </div>
+
+  <!-- Chapters under History -->
+  <div class="chapter-options" id="history">
+    <div onclick="showContent('buddha')">गौतम बुद्ध</div>
+    <div onclick="showContent('jain')">जैन धर्म</div>
+  </div>
+<div class="content-box" id="buddha">
+    <h3>गौतम बुद्ध का जीवन</h3>
+    <p>
+      गौतम बुद्ध का जन्म 563 ईसा पूर्व में लुंबिनी (वर्तमान नेपाल) में हुआ था। उनका असली नाम सिद्धार्थ था। वे शाक्य कुल के राजकुमार थे। उन्होंने संसार के दुखों को देखकर 29 वर्ष की उम्र में गृह त्याग किया।
+    </p>
+    <p>
+      6 वर्षों की तपस्या के बाद उन्हें बोधगया में ज्ञान प्राप्त हुआ और वे 'बुद्ध' कहलाए। उन्होंने सारनाथ में पहला उपदेश दिया। उन्होंने करुणा, अहिंसा, और मध्यम मार्ग पर ज़ोर दिया।
+    </p>
+    <p>
+      उन्होंने चार आर्य सत्य और अष्टांगिक मार्ग बताया जिससे मुक्ति प्राप्त हो सकती है। 80 वर्ष की उम्र में उन्होंने कुशीनगर में महापरिनिर्वाण प्राप्त किया।
+    </p>
+  </div>
+
+  <!-- Content: जैन धर्म -->
+  <div class="content-box" id="jain">
+    <h3>जैन धर्म का परिचय</h3>
+    <p>
+      जैन धर्म भारत का एक प्राचीन धर्म है जिसकी स्थापना ऋषभदेव द्वारा मानी जाती है, लेकिन इसके प्रमुख प्रवर्तक महावीर स्वामी थे। वे जैन धर्म के 24वें तीर्थंकर थे।
+    </p>
+    <p>
+      उन्होंने सत्य, अहिंसा, अस्तेय, अपरिग्रह और ब्रह्मचर्य का उपदेश दिया। जैन धर्म आत्मा की शुद्धि, कर्मों से मुक्ति और मोक्ष को लक्ष्य मानता है।
+    </p>
+    <p>
+      जैन धर्म के अनुयायी अहिंसा का अत्यधिक पालन करते हैं और सत्य, तप, और ध्यान पर बल देते हैं। यह धर्म भारत सहित कई देशों में फैला हुआ है।
+    </p>
+  </div>
+
+  <!-- Empty placeholders for other subjects -->
+  <div class="chapter-options" id="math">
+    <div>अभी कोई चैप्टर नहीं</div>
+  </div>
+  <div class="chapter-options" id="computer">
+    <div>अभी कोई चैप्टर नहीं</div>
+  </div>
+
+  <div class="chapter-options" id="ENGLISH">
+    <div onclick="showContent('VERB')">VERB</div>
+    <div onclick="showContent('NOUN')">NOUN</div>
+  <div onclick="showContent('ADJECTIVE')">ADJECTIVE</div>
+    <div onclick="showContent('PRONOUN')">PRONOUN</div>
+  </div>
+</div>
+
+  <div class="content-box" id="VERB">
+<div style="background-color:#e8f5e9; border:1px solid #4caf50; padding:15px; margin:20px;">
+  <h2 style="color:#2e7d32;">Verb (भर्प) क्या होता है? - आसान भाषा में</h2>
+  <p>
+    <strong>Verb</strong> यानी "भर्प" का मतलब होता है — <b>कोई काम करना</b> या <b>क्रिया</b>।
+  </p>
+  <p>
+    जो भी काम किया जाता है — जैसे बोलना, चलना, खाना, सोना — यह सब <strong>verb</strong> होते हैं।
+  </p>
+  <h3>उदाहरण:</h3>
+  <ul>
+    <li>मैं खेत <b>जोतता</b> हूँ। (जोतता = Verb)</li>
+    <li>गाय <b>दूध देती</b> है। (देती = Verb)</li>
+    <li>बच्चे <b>खेलते</b> हैं। (खेलते = Verb)</li>
+    <li>बारिश <b>हो रही</b> है। (हो रही = Verb)</li>
+  </ul>
+  <p>
+    👉 किसान भाई के लिए: जैसे हल चलाना, खेत जोतना, बुवाई करना — ये सब <b>काम</b> हैं। इंग्लिश में इन्हें <b>Verb</b> कहते हैं।
+  </p>
+</div>
+  
+
+  
+
+  <script>
+    function toggleMenu() {
+      let menu = document.getElementById('subjectMenu');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+      document.querySelectorAll('.chapter-options').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.content-box').forEach(el => el.style.display = 'none');
+    }
+
+    function showChapters(subjectId) {
+      document.querySelectorAll('.chapter-options').forEach(el => el.style.display = 'none');
+      document.getElementById(subjectId).style.display = 'block';
+      document.querySelectorAll('.content-box').forEach(el => el.style.display = 'none');
+    }
+
+    function showContent(contentId) {
+      document.querySelectorAll('.content-box').forEach(el => el.style.display = 'none');
+      document.getElementById(contentId).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
